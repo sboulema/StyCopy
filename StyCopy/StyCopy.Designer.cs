@@ -38,6 +38,7 @@
             this.AToBButton = new System.Windows.Forms.Button();
             this.countLabel = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -138,6 +139,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.progressBar1);
             this.splitContainer1.Panel1.Controls.Add(this.containerAListView);
             this.splitContainer1.Panel1.Controls.Add(this.browseButton);
             this.splitContainer1.Panel1.Controls.Add(this.BToAButton);
@@ -152,6 +154,13 @@
             this.splitContainer1.Size = new System.Drawing.Size(596, 401);
             this.splitContainer1.SplitterDistance = 306;
             this.splitContainer1.TabIndex = 8;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 368);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 7;
             // 
             // StyCopy
             // 
@@ -183,6 +192,7 @@
         private System.Windows.Forms.Button AToBButton;
         private System.Windows.Forms.Label countLabel;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

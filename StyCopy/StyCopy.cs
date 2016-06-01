@@ -19,11 +19,16 @@ namespace StyCopy
             {
                 containerAListView.Clear();
 
-                string[] files = Directory.GetFiles(folderBrowserDialog1.SelectedPath, $"*.{extensionTextBox.Text}", SearchOption.AllDirectories);
+                progressBar1.Value = 0;
+                progressBar1.Maximum = Directory.EnumerateFiles(folderBrowserDialog1.SelectedPath, $"*.{extensionTextBox.Text}", SearchOption.AllDirectories).Count();
+                progressBar1.Step = 1;
+
+                var files = Directory.EnumerateFiles(folderBrowserDialog1.SelectedPath, $"*.{extensionTextBox.Text}", SearchOption.AllDirectories);
 
                 foreach (var file in files)
                 {
                     containerAListView.Items.Add(file);
+                    progressBar1.PerformStep();
                 }
             }
         }
