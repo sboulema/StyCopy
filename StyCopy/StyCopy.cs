@@ -29,6 +29,8 @@ namespace StyCopy
                 {
                     containerAListView.Items.Add(file);
                     progressBar1.PerformStep();
+                    label1.Text = $"{containerAListView.Items.Count}/{progressBar1.Maximum}";
+                    label1.Update();
                 }
             }
         }
