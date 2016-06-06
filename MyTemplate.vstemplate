@@ -1,0 +1,34 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TyrosHDcopyTool</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TyrosHDcopyTool</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="TyrosHDcopyTool.csproj" File="TyrosHDcopyTool.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Resources.resx">Resources.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.settings">Settings.settings</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.Designer.cs">Settings.Designer.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Sirea-Instruments-Keyboard.ico">Sirea-Instruments-Keyboard.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="TyrosHDcopyTool.cs">TyrosHDcopyTool.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="TyrosHDcopyTool.Designer.cs">TyrosHDcopyTool.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="TyrosHDcopyTool.resx">TyrosHDcopyTool.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="TyrosHDcopyTool_TemporaryKey.pfx">TyrosHDcopyTool_TemporaryKey.pfx</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

@@ -16,7 +16,7 @@ namespace StyCopy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StyCopy());
+            Application.Run(new TyrosHDCopy());
         }
     }
 }
