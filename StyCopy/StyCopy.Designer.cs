@@ -31,15 +31,15 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.extensionTextBox = new System.Windows.Forms.TextBox();
             this.browseButton = new System.Windows.Forms.Button();
-            this.containerAListView = new System.Windows.Forms.ListView();
             this.containerBListView = new System.Windows.Forms.ListView();
             this.saveButton = new System.Windows.Forms.Button();
             this.BToAButton = new System.Windows.Forms.Button();
             this.AToBButton = new System.Windows.Forms.Button();
             this.countLabel = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.containerAListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,19 +64,6 @@
             this.browseButton.Text = "Browse...";
             this.browseButton.UseVisualStyleBackColor = true;
             this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
-            // 
-            // containerAListView
-            // 
-            this.containerAListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.containerAListView.Location = new System.Drawing.Point(12, 12);
-            this.containerAListView.Name = "containerAListView";
-            this.containerAListView.Size = new System.Drawing.Size(240, 348);
-            this.containerAListView.TabIndex = 2;
-            this.containerAListView.UseCompatibleStateImageBehavior = false;
-            this.containerAListView.View = System.Windows.Forms.View.SmallIcon;
-            this.containerAListView.SelectedIndexChanged += new System.EventHandler(this.containerAListView_SelectedIndexChanged);
             // 
             // containerBListView
             // 
@@ -140,9 +127,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.containerAListBox);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.progressBar1);
-            this.splitContainer1.Panel1.Controls.Add(this.containerAListView);
             this.splitContainer1.Panel1.Controls.Add(this.browseButton);
             this.splitContainer1.Panel1.Controls.Add(this.BToAButton);
             this.splitContainer1.Panel1.Controls.Add(this.AToBButton);
@@ -157,13 +144,6 @@
             this.splitContainer1.SplitterDistance = 306;
             this.splitContainer1.TabIndex = 8;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 368);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -172,6 +152,22 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "label1";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 368);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 7;
+            // 
+            // containerAListBox
+            // 
+            this.containerAListBox.FormattingEnabled = true;
+            this.containerAListBox.Location = new System.Drawing.Point(12, 12);
+            this.containerAListBox.Name = "containerAListBox";
+            this.containerAListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.containerAListBox.Size = new System.Drawing.Size(240, 342);
+            this.containerAListBox.TabIndex = 9;
             // 
             // StyCopy
             // 
@@ -196,7 +192,6 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.TextBox extensionTextBox;
         private System.Windows.Forms.Button browseButton;
-        private System.Windows.Forms.ListView containerAListView;
         private System.Windows.Forms.ListView containerBListView;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button BToAButton;
@@ -205,6 +200,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox containerAListBox;
     }
 }
 

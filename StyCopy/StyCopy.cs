@@ -17,39 +17,27 @@ namespace StyCopy
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                containerAListView.Clear();
-
-                progressBar1.Value = 0;
-                progressBar1.Maximum = Directory.EnumerateFiles(folderBrowserDialog1.SelectedPath, $"*.{extensionTextBox.Text}", SearchOption.AllDirectories).Count();
-                progressBar1.Step = 1;
-
-                var files = Directory.EnumerateFiles(folderBrowserDialog1.SelectedPath, $"*.{extensionTextBox.Text}", SearchOption.AllDirectories);
-
-                foreach (var file in files)
-                {
-                    containerAListView.Items.Add(file);
-                    progressBar1.PerformStep();
-                    label1.Text = $"{containerAListView.Items.Count}/{progressBar1.Maximum}";
-                    label1.Update();
-                }
+                var files = Directory.GetFiles(folderBrowserDialog1.SelectedPath, $"*.{extensionTextBox.Text}", SearchOption.AllDirectories);
+                containerAListBox.DataSource = files;
+                label1.Text = files.Count().ToString();
             }
         }
 
         private void AToBButton_Click(object sender, EventArgs e)
         {
-            if (containerAListView.SelectedItems.Count > 0)
+            if (containerAListBox.SelectedItems.Count > 0)
             {
-                foreach (ListViewItem item in containerAListView.SelectedItems)
+                foreach (string file in containerAListBox.SelectedItems)
                 {
-                    containerAListView.Items.Remove(item);
-                    containerBListView.Items.Add(item);
+                    containerAListBox.Items.Remove(file);
+                    containerBListView.Items.Add(file);
                 }
             }
             else
             {
-                foreach (ListViewItem item in containerAListView.Items.Cast<ListViewItem>().Take(500))
+                foreach (string item in containerAListBox.Items.Cast<string>().Take(500))
                 {
-                    containerAListView.Items.Remove(item);
+                    containerAListBox.Items.Remove(item);
                     containerBListView.Items.Add(item);
                 }
             }
@@ -62,7 +50,7 @@ namespace StyCopy
             foreach (ListViewItem item in containerBListView.SelectedItems)
             {
                 containerBListView.Items.Remove(item);
-                containerAListView.Items.Add(item);
+                containerAListBox.Items.Add(item);
             }
             countLabel.Text = $"{containerBListView.Items.Count}/500";
         }
@@ -84,7 +72,7 @@ namespace StyCopy
 
         private void containerAListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (containerAListView.SelectedItems.Count + containerBListView.Items.Count > 500)
+            if (containerAListBox.SelectedItems.Count + containerBListView.Items.Count > 500)
             {
                 AToBButton.Enabled = false;
             }
